@@ -139,6 +139,10 @@ section:first-child {
     height: 50px;
 }
 
+.table .country {
+    vertical-align: baseline;
+}
+
 
 /* Cтили блочной верстки */
 
