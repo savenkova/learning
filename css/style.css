@@ -66,8 +66,8 @@ section:first-child {
 
 .series {
     font-size: 60px;
-    line-height: 30px;
     padding: 0 10px 0 24px;
+    /* vertical-align: inherit; */
 }
 
 .code {
@@ -94,7 +94,6 @@ section:first-child {
 .reg-code {
     font-size: 48px;
     letter-spacing: 3px;
-    line-height: 30px;
 }
 
 .flag {
@@ -102,6 +101,14 @@ section:first-child {
     width: auto;
     height: 12px;
     border: 1px solid #000000;
+}
+
+.fontFix:before {
+    display: block;
+    content: '';
+    height: 0;
+    width: 100%;
+    margin-top: -0.4em;
 }
 
 
