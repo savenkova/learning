@@ -120,6 +120,10 @@ section:first-child {
     box-shadow: none;
 }
 
+.table .fontFix:before {
+    margin-top: -0.36em;
+}
+
 .table-border {
     display: inline-block;
     border: 4px solid #000000;;
@@ -131,9 +135,8 @@ section:first-child {
 }
 
 .table .series {
-    vertical-align: top;
     border-right: 2px solid #000000;
-    height: 56px;
+    height: 50px;
 }
 
 
@@ -155,7 +158,7 @@ section:first-child {
 
 .block .country {
     position: relative;
-    /* top: 14px; */
+    top: 2px;
     left: 2px;
 }
 
