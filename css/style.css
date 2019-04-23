@@ -1,14 +1,15 @@
 /* Общие стили */
 
 @font-face {
-    font-family: 'RoadNumbersRUS';  /* нужно нормально подключить шрифт */
-    src: url('../fonts/RoadNumbersRUS.otf') format('truetype');
+    font-family: 'RoadNumbers';  /* нужно нормально подключить шрифт */
     font-weight: normal;
     font-style: normal;
+    src: url('../fonts/RoadNumbersCyr.woff2') format('woff2'),
+         url('../fonts/RoadNumbersCyr.woff') format('woff');
 }
 
 body {
-    font-family: 'RoadNumbersRUS';
+    font-family: 'RoadNumbers';
     color: #000;
 }
 
@@ -64,12 +65,9 @@ section:first-child {
 }
 
 .series {
-    padding: 0 10px 0 24px;
-}
-
-.series span {
     font-size: 60px;
     line-height: 50%;
+    padding: 0 10px 0 24px;
 }
 
 .code {
@@ -110,7 +108,6 @@ section:first-child {
 /* Cтили табличной верстки */
 
 .table {
-    display: table;
     margin: 0;
     border-collapse: collapse;
     border: none;
@@ -127,24 +124,12 @@ section:first-child {
 
 }
 
-.table>div {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    border: none;
-}
-
 .table .series {
+    vertical-align: top;
     border-right: 2px solid #000000;
+    height: 56px;
 }
 
-.table .code {
-    display: table;
-}
-
-.table .reg-code, .table .country {
-    display: table-row;
-}
 
 /* Cтили блочной верстки */
 
@@ -155,10 +140,17 @@ section:first-child {
 
 .block .series {
     float: left;
+    height: 100%;
 }
 
 .block .code {
     float: right;
+}
+
+.block .country {
+    position: relative;
+    top: 14px;
+    left: 2px;
 }
 
 .clearfix {
