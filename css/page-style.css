@@ -1,0 +1,188 @@
+body {
+    font-family: "Times New Roman";
+    font-size: 16px;
+    color: #393b38;
+}
+
+.article {
+    max-width: 600px;
+    margin: 1em auto 0;
+    padding: 3.5em 2.5em 2em 4em;
+    background: #f2f1f6;
+    background: linear-gradient(to right, #f4f5f9 0, #f4f5f9 96%, #e7e8ec 98%, #a9adb6 100%);
+    border-right: .1em solid #6c6f74;
+    box-shadow: 0 0 .3em .1em rgba(0,0, 0, .2);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-indent: 1.5em;
+}
+
+.header {
+    position: relative;
+    display: flex;
+}
+
+.paragraph-container {
+    margin: 0 1.5em 0 2em;
+}
+
+.paragraph {
+    display: inline-block;
+    padding: .4em .25em;
+    font-family: "Times New Roman";
+    font-size: 1.4em;
+    font-weight: bold;
+    background: radial-gradient(#f4f5f9, rgb(185, 187, 206));
+    border: 3px solid #728dd0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.paragraph:before, .paragraph:after,
+.header-content:before, .header-content:after {
+    content: '';
+    position: absolute;
+    top: 1.025em;
+    display: block;
+    height: 3px;
+    background: #728dd0;
+}
+
+.paragraph:before {
+    left: -2.5em;
+    width: 4em;
+}
+
+.paragraph:after {
+    width: 1.1em;
+    left: 3.6em;
+}
+
+.header-content:before {
+    width: 3px;
+    height: 5em;
+    top: 3.1em;
+    left: 3.5em;
+}
+
+.header-content:after {
+    width: 4.75em;
+    top: 1.5em;
+    right: .25em;
+}
+
+.header-content {
+    margin-left: .5em;
+}
+
+.header-content h1 {
+    margin-top: .75em;
+    font-size: 1.2em;
+}
+
+.article-name {
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .5px;
+}
+
+.header-content p {
+    position: relative;
+    margin: 1.5em 0 1em;
+    text-indent: inherit;
+    font-size: .75em;
+    line-height: 140%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.header-content p:before {
+    content: '?';
+    position: absolute;
+    top: -.5em;
+    left: -2em;
+    display: block;
+    padding: .15em .475em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #6963a1;
+    background: linear-gradient(to right, rgba(137, 182, 115, 1) 0, rgba(137, 182, 115, 0) 75%);
+    border-radius: 50%;
+    
+}
+
+strong.description {
+    font-style: italic;
+}
+
+.note {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    margin-top: .5em;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: .75em;
+    text-indent: 1.5em;
+}
+
+li>span {
+    font-weight: bold;
+}
+
+li h3 {
+    display: inline;
+    font-family: "Times New Roman";
+    font-size: 1em;
+}
+
+.content .note {
+    margin: 1.2em 0;
+    padding: 1.2em 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .75em;
+    font-weight: 600;
+    opacity: .9;
+    letter-spacing: -.35px;
+    background: linear-gradient(to bottom, rgba(212, 214, 235, 1),rgba(212, 214, 235, 0));
+}
+
+.content h2 {
+    text-indent: 1.5em;
+    font-size: 1em;
+}
+
+.exercise-block {
+    margin: .75em 0 0 4em;
+    text-indent: 0;
+}
+
+.exercise-title {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #d75448;
+}
+
+main {
+    position: relative;
+}
+
+main:after {
+    content: '94';
+    position: absolute;
+    font-size: .75em;
+}
