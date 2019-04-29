@@ -6,6 +6,7 @@ body {
 
 .article {
     max-width: 600px;
+    min-width: 320px;
     margin: 1em auto 0;
     padding: 3.5em 2.5em 2em 4em;
     background: #f2f1f6;
@@ -59,8 +60,8 @@ p {
 }
 
 .paragraph:before {
-    left: -2.5em;
-    width: 4em;
+    left: -.5em;
+    width: 2em;
 }
 
 .paragraph:after {
@@ -185,4 +186,43 @@ main:after {
     content: '94';
     position: absolute;
     font-size: .75em;
+}
+
+@media screen and (max-width: 720px) {
+    .article {
+        padding: 1em;
+    }
+    .paragraph:before {
+        left: -.5em;
+        width: 2em;
+    }
+    .header-content:before {
+        left: 3.5em;
+    }
+    .header-content:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .paragraph-container {
+        margin: 0 .5em 0 1em;
+    }
+    .paragraph:before {
+        left: -0.25em;
+        width: 1em;
+    }
+    .paragraph:after {
+        width: .4em;
+        left: 3em;
+    }
+    .header-content:before {
+        display: none;
+    }
+    .header-content p {
+        margin: 1em auto .75em;
+    }
+    .header-content p:before {
+        top: 0em;
+    }
 }
