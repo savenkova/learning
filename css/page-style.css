@@ -5,15 +5,18 @@ body {
 }
 
 .article {
+    position: relative;
     max-width: 600px;
     min-width: 320px;
     margin: 1em auto 0;
-    padding: 3.5em 2.5em 2em 4em;
+    padding: 3.5em 2.5em 4em 4em;
     background: #f2f1f6;
     background: linear-gradient(to right, #f4f5f9 0, #f4f5f9 96%, #e7e8ec 98%, #a9adb6 100%);
     border-right: .1em solid #6c6f74;
     box-shadow: 0 0 .3em .1em rgba(0,0, 0, .2);
 }
+
+
 
 h1, h2, h3 {
     margin: 0;
@@ -21,10 +24,26 @@ h1, h2, h3 {
     font-family: "Arial", sans-serif;
 }
 
+h2 {
+    display: inline-block;
+}
+
 p {
     margin: 0;
     padding: 0;
     text-indent: 1.5em;
+}
+
+.second-page  .main p:first-child, .third-page  .main p:first-child {
+    text-indent: 0;
+}
+
+.article.second-page {
+    margin: 0 auto 1em;
+    padding: 3.5em 4em 4em 2.5em;
+    background: linear-gradient(to left, #f4f5f9 0, #f4f5f9 96%, #e7e8ec 98%, #a9adb6 100%);
+    border-right: none;
+    border-left: .1em solid #6c6f74;
 }
 
 .header {
@@ -132,7 +151,6 @@ strong.description {
 
 ul {
     margin: 0;
-    margin-top: .5em;
     padding: 0;
     list-style: none;
 }
@@ -173,19 +191,101 @@ li h3 {
     text-indent: 0;
 }
 
-.exercise-title {
+.highlight-title {
     font-family: 'Didact Gothic', sans-serif;
     color: #d75448;
 }
 
-main {
+.highlight-list {
+    position: relative;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.highlight-list li {
+    position: relative;
+    margin-bottom: 0;
+    text-indent: initial;
+}
+
+.highlight-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1.425em;
+    width: 1em;
+    height: 1em;
+    background-size: 1.5em;
+}
+
+.highlight-list li.triangle:before {
+    background: url(../img/svg/triangle.svg);
+}
+
+.highlight-list li.square:before {
+    background: url(../img/svg/square.svg);
+}
+
+.highlight-list li.circle:before {
+    background: url(../img/svg/circle.svg);
+}
+
+.highlight-list:before {
+    content: '';
+    position: absolute;
+    left: -1em;
+    width: .2em;
+    height: 20.5em;
+    background: #7d93b8;
+}
+
+.inline-list li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+    text-indent: initial;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.inline-list li:first-child {
+    padding-left: 0;
+}
+
+.inline-list li:not(:first-child):before {
+    content: '';
+    position: absolute;
+    top: .45em;
+    left: .25em;
+    width: .3em;
+    height: .3em;
+    background: rgba(215, 84, 72, 1);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+
+.main {
     position: relative;
 }
 
-main:after {
+.main:after {
     content: '94';
     position: absolute;
     font-size: .75em;
+}
+
+.second-page .main:after {
+    content: '95';
+    right: 0;
+}
+
+.third-page .main:after {
+    content: '96';
 }
 
 @media screen and (max-width: 720px) {
@@ -225,4 +325,87 @@ main:after {
     .header-content p:before {
         top: 0em;
     }
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+}
+
+nav li {
+    position: absolute;
+    left: 640px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.second-page nav li:first-child {
+    left: -170px;
+}
+
+.second-page nav li:nth-child(2) {
+    left: 665px;
+}
+
+.third-page nav li {
+    left: -200px;
+}
+
+.superscript {
+    position: relative;
+    display: inline-block;
+    text-indent: initial;
+    font-weight: normal;
+}
+
+.superscript:before {
+    content: '0';
+    position: absolute;
+    bottom: 14px;
+    right: 1px;
+    font-size: 12px;
+}
+
+.superscript.one:before {
+    content: '-1';
+}
+
+.superscript.two:before {
+    content: '-2';
+}
+
+.superscript.four:before {
+    content: '+4';
+}
+
+.superscript.six:before {
+    content: '+6';
+}
+
+.equation {
+    line-height: 200%;
+}
+
+.framed {
+    display: inline-block;
+    margin: 1em 1.5em;
+    padding: .6em 2.4em;
+    border: .2em solid rgba(215, 84, 72, .5);
+}
+
+.filled {
+    padding: 14px 5px 0;
+    background: #f7f5c4;
+    border: 1px solid #000000;
+    line-height: initial;
+}
+
+.superscript.filled:before {
+    right: 3px;
+    bottom: 16px;
+}
+
+.conclusion {
+    margin-left: 1.5em;
 }
